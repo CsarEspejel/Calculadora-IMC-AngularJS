@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{header}}</title>
+</head>
+<body>
+    <div class="container">
+        <div class="formulario">
+            <h1>{{header}}</h1>
+            <form (submit)="obtenerInformacion(nombre, edad, sexo, peso, altura)">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" #nombre required placeholder="Ingresa tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="edad">Edad</label>
+                    <input type="number" class="form-control" #edad required placeholder="Ingresa tu edad">
+                </div>
+                <div class="form-group">
+                    <label for="sexo">Sexo</label>
+                    <select name="sexo" class="form-control" #sexo required>
+                        <option value="" selected>Seleciona uno</option>
+                        <option value="H">Hombre</option>
+                        <option value="M">Mujer</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="peso">Peso</label>
+                    <input type="number" class="form-control" #peso required placeholder="Peso en KG Ej. 62">
+                </div>
+                <div class="form-group">
+                    <label for="altura">Altura</label>
+                    <input type="text" class="form-control" #altura required placeholder="Altura en metros Ej. 1.65">
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar información</button>
+          </form>
+        </div>
+        <div class="informacion">
+            <h1>Información</h1>
+            <div class="imc">
+                <h3>Indice de masa corporal</h3>
+                <p *ngIf="show == false">Esperando tus datos para saber tu IMC...</p>
+                <p *ngIf="show == true">
+                    Tu IMC es: {{imcMessage.imc}} <br>
+                    {{imcMessage.message}}
+                </p>
+                <p></p>
+            </div>
+            <div class="edad">
+                <h3>Mayor de edad</h3>
+                <p *ngIf="show == false">Esperando tus datos para saber si eres mayor de edad o no :O</p>
+                <p *ngIf="show == true">{{edadMessage}}</p>
+            </div>
+            <div class="datos">
+                <h3>Datos</h3>
+                <p *ngIf="show == false">Aquí se mostrarán tus datos después de ingresarlos ;)</p>
+                <p *ngIf="show == true">Nombre: {{datos.Nombre}}</p>
+                <p *ngIf="show == true">Edad: {{datos.Edad}}</p>
+                <p *ngIf="show == true">Número de seguridad social: {{datos.NSS}}</p>
+                <p *ngIf="show == true">Sexo: {{datos.Sexo}}</p>
+                <p *ngIf="show == true">Peso: {{datos.Peso}}</p>
+                <p *ngIf="show == true">Altura: {{datos.Altura}}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

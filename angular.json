@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "examenbase"
+    }
+  },
+  "defaultProject": "examenbase",
+  "cli": {
+    "analytics": "40cccf29-1a13-45fe-9fc5-308e2a831a93"
+  }
 }
