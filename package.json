@@ -1,6 +1,10 @@
 {
-  "name": "examenbase",
-  "version": "0.0.0",
+  "name": "calculadora_imc",
+  "version": "0.0.1",
+  "author": { "name" : "César Espejel",
+      "email" : "cesarespejel97@gmail.com",
+      "url" : "https://github.com/CsarEspejel"
+    },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
