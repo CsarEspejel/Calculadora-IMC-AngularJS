@@ -1,4 +1,6 @@
-# Calculadora de Indice de Masa Corporal / Angular JS
+# Calculadora de Indice de Masa Corporal / Angular JS  
+  
+Preview url: https://calculadora-imc.vercel.app/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
