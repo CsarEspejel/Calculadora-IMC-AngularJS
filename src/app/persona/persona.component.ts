@@ -8,7 +8,7 @@ import { Persona } from '../persona';
 })
 export class PersonaComponent implements OnInit {
   header = 'Formulario';
-  imcData:object;
+  imcData:any;
   imcMessage:object;
   mayorEdad:boolean;
   edadMessage:string;
